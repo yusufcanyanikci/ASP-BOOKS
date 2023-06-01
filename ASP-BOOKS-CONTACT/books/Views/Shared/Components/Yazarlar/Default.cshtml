@@ -1,0 +1,21 @@
+@model List<books.Models.ViewModels.YazarListVM>
+  <div class="card mb-4">
+    <div class="card-header"><strong>Yazarlar</strong></div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="list-unstyled mb-0">
+            @foreach (var yazar in Model) {
+            <li>
+              <a class="btn btn-dark my-1" href="/Yazar/@yazar.id"
+                >@yazar.adi
+                <span class="badge bg-warning text-dark ms-3 "
+                  >@yazar.kitapSayisi</span
+                >
+              </a>
+            </li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
